@@ -12,14 +12,12 @@
 ###### Todos os arquivos contém minhas respostas/soluções pessoais
 
 ### Todos estão separados na seguinte ordem:
-<ul>
-    <li>Pasta por fase</li>
-    <li>Pasta por número do módulo</li>
-    <li>No nome do arquivo consta o número do desafio e uma breve descrição.</li>
-</ul>
+> * Pasta por fase
+> * Pasta por número do módulo
+> * No nome do arquivo consta o número do desafio e uma breve descrição.
 
 ###  
 
 <h1 align="center">
-    <img alt="Launchbase" src="https://uploaddeimagens.com.br/images/002/577/833/full/assignature.png?1586348657" width="170px" />
+    <img alt="Launchbase" src="https://uploaddeimagens.com.br/images/002/577/833/full/assignature.png?1586348657" heigth="100px" />
 </h1>
