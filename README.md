@@ -20,5 +20,5 @@
 
 
 <h1 align="center">
-    <img alt="Launchbase" src="https://uploaddeimagens.com.br/images/002/577/833/full/assignature.png?1586348657" width="100px" />
+    <img alt="Launchbase" src="https://uploaddeimagens.com.br/images/002/577/833/full/assignature.png?1586348657" width="170px" />
 </h1>
