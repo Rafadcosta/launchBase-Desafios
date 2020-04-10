@@ -26,12 +26,39 @@ const usuarios = [
     }
 ];
 
-for (i=0 ; i<usuarios.length;i++){
+for (let usuario of usuarios) {
+    // console.log(`${usuario.nome} trabalha com ${usuario.tecnologias.join(', ')}`)
+}
 
-    console.log(`${usuarios[i].nome} trabalha com `);
-    for (j=0; j< usuarios[i].tecnologias.length; j++){
-        
-        console.log(`${usuarios[i].tecnologias[j]}`);
+function veSeUserUsaCSS(usuario){
+    for (let tecnologia of usuario.tecnologias){
+        if (tecnologia == 'CSS'){
+            return true;
+        }
     }
 
+    return false;
 }
+
+for (let i=0;i<usuarios.length;i++){
+    const usersCSS = veSeUserUsaCSS(usuarios[i]);
+
+    if (usersCSS == true){
+        console.log(`O usuário ${usuarios[i].nome} trabalha com CSS`);
+    } else {
+        console.log(`O usuário ${usuarios[i].nome} não trabalha com CSS`);
+    }
+}
+
+
+
+// primeiro teste para solução do caso
+// for (let i=0 ; i<usuarios.length;i++){
+
+//     console.log(`${usuarios[i].nome} trabalha com `);
+//     for (let j=0; j< usuarios[i].tecnologias.length; j++){
+        
+//         console.log(`${usuarios[i].tecnologias[j]}`);
+//     }
+
+// }
