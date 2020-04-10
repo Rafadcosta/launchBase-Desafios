@@ -1,87 +1,87 @@
-// 
-
-
-const turmaA = [
+const classA = [
     {
-        nome: 'Rafa',
-        nota: 9.8
+        name: 'Rafa',
+        grade: 6.8
     },
     {
-        nome: 'Gabi',
-        nota: 10
+        name: 'Gabi',
+        grade: 7.5
     },
     {
-        nome: 'Rê',
-        nota: 2
+        name: 'Rê',
+        grade: 2
     },
     {
-        nome: 'Lulu',
-        nota: 8
+        name: 'Lulu',
+        grade: 0
     }
 ];
 
-const turmaB = [
+const classB = [
     {
-        nome: 'João',
-        nota: 7
+        name: 'João',
+        grade: 7
     },
     {
-        nome: 'José',
-        nota: 8
+        name: 'José',
+        grade: 8
     },
     {
-        nome: 'Juca',
-        nota: 5
+        name: 'Juca',
+        grade: 4
     },
     {
-        nome: 'AlunoRandom',
-        nota: 10
+        name: 'studentRandom',
+        grade: 10
     }
 ];
 
-function calculaMedia(alunos){
-    let soma=0;
-    for (let i=0; i<alunos.length; i++){
-        soma = soma + alunos[i].nota;
+function calculateAverage(students){
+    let sum=0;
+
+    for (let i=0; i<students.length; i++){
+        sum = sum + students[i].grade;
     }
 
-    const media = soma / alunos.length;
+    const average = sum / students.length;
 
-    return media;
+    return average;
 }
 
-const media1 = calculaMedia(turmaA);
-const media2 = calculaMedia(turmaB);
-
-
-function enviaMensagem(media, turma){        
-    if (media > 5){
-        console.log(`A média da ${turma} foi de ${media}, parabéns!`);
-    }else {
-        console.log(`A média da ${turma} foi menor que 5.`);
+function sendMessage(average, turma){        
+    if (average > 5){
+        console.log(`${turma} averagge: ${average}. Congratulations!`);
+    } else {
+        console.log(`${turma} averagge: ${average}. Is not good.`);
     }
 }
 
-enviaMensagem(media1, 'turma A');
-enviaMensagem(media2, 'turma B');
+function markAsFlunked(student){
+    student.flunked = false;
+    
+    if (student.grade < 5){
+        student.flunked = true;
+    }       
+}
 
+function sendFlunkedMessage(student){
+    if (student.flunked){
+        console.log(`the student ${student.name} is flunked!`)
+    }
+}
 
+function studentsflunkeds(students){
+    for (let student of students){
+        markAsFlunked(student);
+        sendFlunkedMessage(student)
+    }
+}
 
-// function calculaMedia(alunos){
-//     return (alunos[0].nota + alunos[1].nota + alunos[2].nota)/3;
-// }
+const average1 = calculateAverage(classA);
+const average2 = calculateAverage(classB);
 
-// const media1 = calculaMedia(turmaA);
-// const media2 = calculaMedia(turmaB);
+sendMessage(average1, 'class A');
+sendMessage(average2, 'class B');
 
-
-// function enviaMensagem(media, turma){        
-//     if (media > 5){
-//         console.log(`A média da ${turma} foi de ${media}, parabéns!`);
-//     }else {
-//         console.log(`A média da ${turma} foi menor que 5.`);
-//     }
-// }
-
-// enviaMensagem(media1, 'turma A');
-// enviaMensagem(media2, 'turma B');
+studentsflunkeds(classA);
+studentsflunkeds(classB);
