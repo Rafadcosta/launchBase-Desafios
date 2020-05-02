@@ -3,7 +3,8 @@ module.exports = [
         id: "BvhYm0BOLvA",
         title: "Dark Mode raiz com CSS e JavaScript | Code/Drops #26",
         duration: "17:35 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     {
         id: "DiXbJL3iWVs",
@@ -21,7 +22,8 @@ module.exports = [
         id: "nDN4JRbFEns",
         title: "NestJS + TypeORM + GraphQL | Code Challenge",
         duration: "3:11:06 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     {
         id: "nhW70H9H4gU",
@@ -33,6 +35,7 @@ module.exports = [
         id: "dlCUvYOlnDo",
         title: "Usando Serverless, Jest e Node.js para corrigir desafios | Behind the Code #13",
         duration: "55:51 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     }
 ]
